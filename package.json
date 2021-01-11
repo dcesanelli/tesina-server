@@ -4,8 +4,9 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "proto": "protoc -I=./protobuf ./protobuf/*.proto --js_out=\"import_style=commonjs:./protobuf\" --grpc-web_out=\"import_style=typescript,mode=grpcwebtext:./protobuf\""  },
+    "start": "next start -p 80",
+    "proto": "protoc -I=./protobuf ./protobuf/*.proto --js_out=\"import_style=commonjs:./protobuf\" --grpc-web_out=\"import_style=typescript,mode=grpcwebtext:./protobuf\""
+  },
   "dependencies": {
     "db-migrate": "^0.11.11",
     "db-migrate-sqlite3": "^0.4.0",
