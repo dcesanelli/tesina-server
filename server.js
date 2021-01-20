@@ -17,8 +17,8 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
 
-  }).listen(4443, err => {
+  }).listen(443, err => {
     if (err) throw err;
-    console.log('> Ready on https://localhost:4443');
+    console.log('> Ready on https://localhost');
   });
 });

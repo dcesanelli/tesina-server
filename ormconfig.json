@@ -1,0 +1,24 @@
+{
+   "type": "mariadb",
+   "host": "localhost",
+   "port": 3306,
+   "username": "root",
+   "password": "mypass",
+   "database": "nubes",
+   "synchronize": true,
+   "logging": true,
+   "entities": [
+      "models/entities/**/*.ts"
+   ],
+   "migrations": [
+      "models/migrations/**/*.ts"
+   ],
+   "subscribers": [
+      "models/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "models/entities",
+      "migrationsDir": "models/migrations",
+      "subscribersDir": "models/subscriber"
+   }
+}
