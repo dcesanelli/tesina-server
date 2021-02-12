@@ -3,7 +3,7 @@ const { parse } = require('url');
 const next = require('next');
 const fs = require('fs');
 
-const dev = true;//process.env.NODE_ENV !== 'production';
+const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -17,8 +17,8 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
 
-  }).listen(4443, err => {
+  }).listen(443, (err) => {
     if (err) throw err;
-    console.log('> Ready on https://localhost:4443');
+    console.log('> Ready on https://localhost:443');
   });
 });
